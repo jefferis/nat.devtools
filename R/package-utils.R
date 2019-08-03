@@ -20,7 +20,7 @@ resave_all_rds <- function(path='.', version=2, dryrun=FALSE, ...) {
 #'
 #' @return Paths to any bad files
 #' @export
-nv_check_urls <-
+nat_check_urls <-
   function(path = ".",
            pattern = c("^(DESCRIPTION|NEWS|.*\\.(R|r|Rmd|md|yml))$"),
            oldusers = c("jefferis", "jefferislab", "flyconnectome"),
@@ -60,3 +60,51 @@ nv_check_urls <-
     }
     dplyr::bind_rows(matches, .id='file')
   }
+
+
+#' Setup a package in natverse style
+#'
+#' @param lifecycle The developmental stage of the package (see )
+#' @inheritParams use_doc_badge
+#' @export
+nat_setup_package <- function(path='.',
+                              lifecycle=c('experimental', 'maturing', 'stable')) {
+  lifecycle=match.arg(lifecycle)
+  owd <- setwd(path)
+  on.exit(setwd(owd))
+  usethis::proj_get()
+
+  usethis::use_github()
+
+  usethis::use_gpl3_license()
+  usethis::use_tidy_description()
+  usethis::use_testthat()
+
+  usethis::git_vaccinate()
+  usethis::use_github_links()
+  use_nat_support()
+
+  usethis::use_readme_md(open = FALSE)
+  usethis::use_cran_badge()
+  use_natverse_badge()
+  use_doc_badge()
+  usethis::use_lifecycle_badge(lifecycle)
+
+  usethis::use_news_md()
+
+  usethis::use_travis()
+
+  usethis::use_package_doc()
+  usethis::use_pkgdown()
+}
+
+use_nat_support <- function(path='.') {
+  owd <- setwd(path)
+  on.exit(setwd(owd))
+  pkg=devtools::as.package(usethis::proj_get())
+  usethis::use_directory(".github", ignore = TRUE)
+  usethis::use_template("natverse-support.md", ".github/SUPPORT.md",
+               data = list(package = pkg$package),
+               package = 'nat.devtools')
+}
+
