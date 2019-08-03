@@ -15,4 +15,9 @@ Language: en-GB
 LazyData: true
 Imports: 
     devtools,
-    usethis
+    usethis,
+    httr,
+    stringr,
+    tibble,
+    dplyr
+RoxygenNote: 6.1.1
