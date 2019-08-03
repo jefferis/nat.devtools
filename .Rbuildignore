@@ -1,3 +1,8 @@
 ^nat\.devtools\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
+^LICENSE\.md$
+^\.travis\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

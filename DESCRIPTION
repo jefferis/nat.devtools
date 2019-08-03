@@ -7,21 +7,22 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jefferis@gmail.com",
            comment = c(ORCID = "0000-0002-0587-9355"))
-Description: Provides functions to automate some aspects of package setup for 
-    the natverse.
+Description: Provides functions to automate some aspects of
+    package setup for the natverse.
 License: GPL-3
-Encoding: UTF-8
-Language: en-GB
-LazyData: true
+URL: https://github.com/jefferis/nat.devtools
+BugReports: https://github.com/jefferis/nat.devtools/issues
 Imports: 
     devtools,
-    usethis,
+    dplyr,
     httr,
     stringr,
     tibble,
-    dplyr
-RoxygenNote: 6.1.1
+    usethis
 Suggests: 
-    clipr
-URL: https://github.com/jefferis/nat.devtools
-BugReports: https://github.com/jefferis/nat.devtools/issues
+    clipr,
+    testthat
+Encoding: UTF-8
+Language: en-GB
+LazyData: true
+RoxygenNote: 6.1.1
