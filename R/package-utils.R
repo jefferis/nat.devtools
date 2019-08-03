@@ -74,7 +74,7 @@ nat_setup_package <- function(path='.',
   on.exit(setwd(owd))
   usethis::proj_get()
 
-  usethis::use_github()
+  # usethis::use_github()
 
   usethis::use_gpl3_license()
   usethis::use_tidy_description()
@@ -90,12 +90,12 @@ nat_setup_package <- function(path='.',
   use_doc_badge()
   usethis::use_lifecycle_badge(lifecycle)
 
-  usethis::use_news_md()
-
   usethis::use_travis()
 
   usethis::use_package_doc()
   usethis::use_pkgdown()
+
+  usethis::ui_todo("Add NEWS.md file with {ui_code('usethis::use_news_md()')}")
 }
 
 use_nat_support <- function(path='.') {
