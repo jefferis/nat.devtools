@@ -23,3 +23,5 @@ Imports:
 RoxygenNote: 6.1.1
 Suggests: 
     clipr
+URL: https://github.com/jefferis/nat.devtools
+BugReports: https://github.com/jefferis/nat.devtools/issues
