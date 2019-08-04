@@ -53,8 +53,7 @@ nat_check_urls <-
         matches[[f]] = tibble::add_column(sel_res, sel_lines, before=TRUE)
       } else next()
       if(replace){
-        txtt = sapply(oldpaths, function(x)
-          stringr::str_replace_all(txt, pattern = replacement_vec))
+        txtt = stringr::str_replace_all(txt, pattern = replacement_vec)
         writeLines(txtt, con = f)
       }
     }
