@@ -8,6 +8,7 @@
 [![Travis build status](https://travis-ci.org/jefferis/nat.devtools.svg?branch=master)](https://travis-ci.org/jefferis/nat.devtools)
 <!-- badges: end -->
 
+
 The goal of nat.devtools is to enable efficient development of R packages according
 to natverse conventions.
 

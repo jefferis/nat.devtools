@@ -18,9 +18,11 @@ Imports:
     httr,
     stringr,
     tibble,
-    usethis
+    usethis,
+    checkmate
 Suggests: 
-    clipr
+    clipr,
+    testthat (>= 2.1.0)
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
