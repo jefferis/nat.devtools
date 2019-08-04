@@ -49,8 +49,8 @@ nat_check_urls <-
         message(f)
         any_res=apply(res, 1, any)
         sel_lines=txt[any_res]
-        sel_res=res[any_res,,drop=FALSE]
-        matches[[f]] = cbind(sel_lines, tibble::as_tibble(sel_res))
+        sel_res=tibble::as_tibble(res[any_res,,drop=FALSE])
+        matches[[f]] = tibble::add_column(sel_res, sel_lines, before=TRUE)
       } else next()
       if(replace){
         txtt = sapply(oldpaths, function(x)
