@@ -2,7 +2,7 @@
 % Please edit documentation in R/badges.R
 \name{add_badge_comments}
 \alias{add_badge_comments}
-\title{Add special marker comments delimiting the badge section to package README}
+\title{Add special marker comments delimiting the badge section of package README}
 \usage{
 add_badge_comments(x = "README.md", f = NULL)
 }
@@ -13,10 +13,18 @@ add_badge_comments(x = "README.md", f = NULL)
 debugging)}
 }
 \description{
-Add special marker comments delimiting the badge section to package README
+Add special marker comments delimiting the badge section of package README
 }
 \details{
-Will only add badge comments if they are not yet present. If there
-  are some badges present then will add marker comments on either side. Will
-  give a warning and do noohting if badge lines are not contiguous
+Badge comment lines are required for
+  \code{usethis::\link{use_badge}} and friends to automagically add badges to
+  a README.
+
+  \code{add_badge_comments} will only add badge comments if they are not yet
+  present. If there are some badges present then will add marker comments on
+  either side. Will give a warning and do nothing if badge lines are not
+  contiguous
+}
+\seealso{
+\code{\link{natverse-badges}}, \code{\link{usethis::use_badge}}
 }

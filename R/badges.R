@@ -59,17 +59,23 @@ badge_lines <- function(f) {
 
 
 
-#' Add special marker comments delimiting the badge section to package README
+#' Add special marker comments delimiting the badge section of package README
 #'
-#' @details Will only add badge comments if they are not yet present. If there
-#'   are some badges present then will add marker comments on either side. Will
-#'   give a warning and do noohting if badge lines are not contiguous
+#' @details Badge comment lines are required for
+#'   \code{usethis::\link{use_badge}} and friends to automagically add badges to
+#'   a README.
+#'
+#'   \code{add_badge_comments} will only add badge comments if they are not yet
+#'   present. If there are some badges present then will add marker comments on
+#'   either side. Will give a warning and do nothing if badge lines are not
+#'   contiguous
 #'
 #' @param x Name of README file
 #' @param f Absolute path to file (can be used instead of \code{x} for
 #'   debugging)
 #'
 #' @export
+#' @seealso \code{\link{natverse-badges}}, \code{\link{usethis::use_badge}}
 add_badge_comments <- function(x='README.md', f=NULL) {
   if(is.null(f))
     f <- usethis::proj_path(x)
