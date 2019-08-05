@@ -83,6 +83,7 @@ nat_setup_package <- function(path='.',
   usethis::use_github_links()
   use_nat_support()
 
+  if(!proj_file_exists('README.md') && !proj_file_exists('README.Rmd'))
   usethis::use_readme_md(open = FALSE)
   add_badge_comments()
   usethis::use_cran_badge()
@@ -109,4 +110,3 @@ use_nat_support <- function(path='.') {
                data = list(package = pkg$package),
                package = 'nat.devtools')
 }
-

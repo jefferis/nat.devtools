@@ -13,13 +13,13 @@ License: GPL-3
 URL: https://github.com/jefferis/nat.devtools
 BugReports: https://github.com/jefferis/nat.devtools/issues
 Imports: 
+    checkmate,
     devtools,
     dplyr,
     httr,
     stringr,
     tibble,
-    usethis,
-    checkmate
+    usethis
 Suggests: 
     clipr,
     testthat (>= 2.1.0)
