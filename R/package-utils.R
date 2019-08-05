@@ -84,6 +84,7 @@ nat_setup_package <- function(path='.',
   use_nat_support()
 
   usethis::use_readme_md(open = FALSE)
+  add_badge_comments()
   usethis::use_cran_badge()
   use_natverse_badge()
   use_doc_badge()
