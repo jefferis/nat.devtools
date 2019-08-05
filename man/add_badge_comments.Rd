@@ -26,5 +26,5 @@ Badge comment lines are required for
   contiguous
 }
 \seealso{
-\code{\link{natverse-badges}}, \code{\link{usethis::use_badge}}
+\code{\link{natverse-badges}}, \code{usethis::\link{use_badge}}
 }

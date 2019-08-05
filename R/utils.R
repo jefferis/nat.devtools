@@ -30,5 +30,5 @@ fake_package <- function(path=tempfile()) {
 }
 
 proj_file_exists <- function(...) {
-  file.exists(proj_path(...))
+  file.exists(usethis::proj_path(...))
 }

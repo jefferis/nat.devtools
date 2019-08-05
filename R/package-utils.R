@@ -16,7 +16,7 @@ resave_all_rds <- function(path='.', version=2, dryrun=FALSE, ...) {
 #' @param pattern Files to check (passed to \code{\link{dir}})
 #' @param oldusers Which GitHub users need changing to natverse
 #' @param replace Whether to replace old URLs with natverse URLs
-#' @inheritParams use_doc_badge
+#' @inheritParams nat_setup_package
 #'
 #' @return Paths to any bad files
 #' @export
@@ -64,7 +64,8 @@ nat_check_urls <-
 #' Setup a package in natverse style
 #'
 #' @param lifecycle The developmental stage of the package (see )
-#' @inheritParams use_doc_badge
+#' @param path Path to git repository containing package (defaults to current
+#'   working directory)
 #' @export
 nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable')) {

@@ -6,7 +6,8 @@
 #'   working directory)
 #'
 #' @export
-#' @rdname natverse-badges
+#' @name natverse-badges
+#' @aliases use_doc_badge
 use_doc_badge <- function(path=".") {
   pkg=devtools::as.package(path)
   issues <- pkg$bugreports
@@ -75,7 +76,7 @@ badge_lines <- function(f) {
 #'   debugging)
 #'
 #' @export
-#' @seealso \code{\link{natverse-badges}}, \code{\link{usethis::use_badge}}
+#' @seealso \code{\link{natverse-badges}}, \code{usethis::\link{use_badge}}
 add_badge_comments <- function(x='README.md', f=NULL) {
   if(is.null(f))
     f <- usethis::proj_path(x)
