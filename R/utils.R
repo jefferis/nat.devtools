@@ -28,3 +28,7 @@ fake_package <- function(path=tempfile()) {
     'Description: test'))
   path
 }
+
+proj_file_exists <- function(...) {
+  file.exists(proj_path(...))
+}

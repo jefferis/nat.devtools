@@ -93,9 +93,11 @@ nat_setup_package <- function(path='.',
   usethis::use_travis()
 
   usethis::use_package_doc()
+
   usethis::use_pkgdown()
 
-  usethis::ui_todo("Add NEWS.md file with {ui_code('usethis::use_news_md()')}")
+  if(!proj_file_exists('NEWS.md'))
+    usethis::ui_todo("Add {ui_path('NEWS.md')} file with {ui_code('usethis::use_news_md()')}")
 }
 
 use_nat_support <- function(path='.') {
