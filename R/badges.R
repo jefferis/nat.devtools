@@ -51,6 +51,8 @@ badge_lines <- function(f) {
   # they should start [![ finish ) and contain badge and/or svg somewhere
   patts=c("badge", ".svg")
   res1=sapply(patts, function(p) stringr::str_detect(txt, stringr::fixed(p)))
+  # trim whitespace from start/end of line
+  txt=trimws(txt)
   res2=substr(txt,1,3)=="[!["
   res3=substr(txt,nchar(txt),nchar(txt))==")"
 
