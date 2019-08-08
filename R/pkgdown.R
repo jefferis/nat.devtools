@@ -13,7 +13,7 @@ nat_setup_pkgdown <- function(config_file = "_pkgdown.yml") {
   }
   y=yaml::read_yaml(f)
   if(is.null(y$navbar))
-    y$navbar <- pkgdown::template_navbar(usethis::proj_get())
+    y$navbar <- pkgdown::template_navbar(usethis::proj_get())$navbar
   else {
 
     if(is.null(y$navbar$structure$right) || is.null(y$navbar$components)){
@@ -31,7 +31,7 @@ nat_setup_pkgdown <- function(config_file = "_pkgdown.yml") {
     use_nat_support()
   }
   if(file.exists(help) && !'help' %in% unlist(y$navbar$structure)) {
-    y$left=append(y$navbar$structure$left, 'help')
+    y$navbar$structure$left=append(y$navbar$structure$left, 'help')
     y$navbar$components$help <- list(text = "Help", href = "SUPPORT.html")
   }
   usethis::write_over(f, yaml::as.yaml(y))
