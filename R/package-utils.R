@@ -101,6 +101,9 @@ nat_setup_package <- function(path='.',
     usethis::ui_todo("Add {ui_path('NEWS.md')} file with {ui_code('usethis::use_news_md()')}")
 }
 
+#' Add a SUPPORT.md file with information about getting help
+#'
+#' @export
 use_nat_support <- function() {
   pkg=get_package()
   usethis::use_directory(".github", ignore = TRUE)
