@@ -63,9 +63,12 @@ nat_check_urls <-
 
 #' Setup a package in natverse style
 #'
-#' @param lifecycle The developmental stage of the package (see )
+#' @param lifecycle The developmental stage of the package (see
+#'   \url{https://www.tidyverse.org/lifecycle})
 #' @param path Path to git repository containing package (defaults to current
 #'   working directory)
+#'
+#' @seealso \code{\link{nat_standard_badges}}
 #' @export
 nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable')) {
@@ -86,11 +89,7 @@ nat_setup_package <- function(path='.',
 
   if(!proj_file_exists('README.md') && !proj_file_exists('README.Rmd'))
   usethis::use_readme_md(open = FALSE)
-  add_badge_comments()
-  usethis::use_cran_badge()
-  use_natverse_badge()
-  use_doc_badge()
-  usethis::use_lifecycle_badge(lifecycle)
+  nat_standard_badges()
 
   usethis::use_travis()
 

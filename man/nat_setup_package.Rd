@@ -11,8 +11,12 @@ nat_setup_package(path = ".", lifecycle = c("experimental", "maturing",
 \item{path}{Path to git repository containing package (defaults to current
 working directory)}
 
-\item{lifecycle}{The developmental stage of the package (see )}
+\item{lifecycle}{The developmental stage of the package (see
+\url{https://www.tidyverse.org/lifecycle})}
 }
 \description{
 Setup a package in natverse style
+}
+\seealso{
+\code{\link{nat_standard_badges}}
 }

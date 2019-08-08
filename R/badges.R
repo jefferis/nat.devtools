@@ -49,19 +49,24 @@ use_natverse_badge <- function() {
 }
 
 
-## WIP
-## @description \code{nat_standard_badges} Adds all standard badges to your README
-##
-## @export
-## @rdname natverse-badges
+#' @description \code{nat_standard_badges} Adds all standard badges to your README.md
+#' @inheritParams add_badge_comments
+#' @inheritParams nat_setup_package
+#' @export
+#' @rdname natverse-badges
 nat_standard_badges <- function(x='README.md', lifecycle=NULL) {
-  f=remove_badges(x)
+  # f=remove_badges(x)
 
   add_badge_comments()
   use_natverse_badge()
-  usethis::use_cran_badge()
   use_doc_badge()
-  usethis::use_lifecycle_badge(lifecycle)
+  if(on_cran()){
+    usethis::use_cran_badge()
+    use_cran_downloads_badge()
+  }
+  if(!is.null(lifecycle))
+    usethis::use_lifecycle_badge(lifecycle)
+
 }
 
 

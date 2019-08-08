@@ -3,6 +3,7 @@
 export(add_badge_comments)
 export(nat_check_urls)
 export(nat_setup_package)
+export(nat_standard_badges)
 export(use_cran_downloads_badge)
 export(use_doc_badge)
 export(use_nat_description_defaults)
