@@ -12,6 +12,9 @@ add_badge_comments(x = "README.md", f = NULL)
 \item{f}{Absolute path to file (can be used instead of \code{x} for
 debugging)}
 }
+\value{
+Path to modified readme file (invisibly)
+}
 \description{
 Add special marker comments delimiting the badge section of package README
 }

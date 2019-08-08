@@ -49,6 +49,23 @@ use_natverse_badge <- function() {
 }
 
 
+## WIP
+## @description \code{nat_standard_badges} Adds all standard badges to your README
+##
+## @export
+## @rdname natverse-badges
+nat_standard_badges <- function(x='README.md', lifecycle=NULL) {
+  f=remove_badges(x)
+
+  add_badge_comments()
+  use_natverse_badge()
+  usethis::use_cran_badge()
+  use_doc_badge()
+  usethis::use_lifecycle_badge(lifecycle)
+}
+
+
+
 has_badge_comments <- function(f) {
   txt = readLines(f)
   badge_comments=c("<!-- badges: start -->","<!-- badges: end -->")
@@ -74,6 +91,19 @@ badge_lines <- function(f) {
   which(positives)
 }
 
+remove_badges <- function(x='README.md') {
+  ow=options(warn=2)
+  on.exit(options(ow))
+
+  f <- add_badge_comments(x)
+  bl=badge_lines(f)
+  if(length(bl)) {
+    txt = readLines(f)
+    txt=txt[-bl]
+    writeLines(txt, f)
+  }
+  invisible(f)
+}
 
 
 #' Add special marker comments delimiting the badge section of package README
@@ -90,6 +120,8 @@ badge_lines <- function(f) {
 #' @param x Name of README file
 #' @param f Absolute path to file (can be used instead of \code{x} for
 #'   debugging)
+#'
+#' @return Path to modified readme file (invisibly)
 #'
 #' @export
 #' @seealso \code{\link{natverse-badges}}, \code{usethis::\link{use_badge}}
@@ -120,4 +152,5 @@ add_badge_comments <- function(x='README.md', f=NULL) {
   }
 
   usethis::ui_done("Badge marker comments added to {ui_field(x)}")
+  invisible(f)
 }
