@@ -17,7 +17,14 @@ to natverse conventions.
 nat.devtools uses the [usethis](https://usethis.r-lib.org/) package 
 to automate a number of development tasks. Please ensure that you have configured
 usethis [as recommended](https://usethis.r-lib.org/articles/articles/usethis-setup.html).
-In particular, I have the following in my `.Rprofile`:
+
+You can do this by typing the following in your R session:
+
+```
+nat.devtools::use_nat_description_defaults()
+```
+
+to edit your `.Rprofile` file. Mine looks like this:
 
 ```
 options(
@@ -32,3 +39,25 @@ options(
   )
 )
 ```
+
+
+## Use 
+
+Once you're all set up, then the easiest way to use the package 
+to configure your current project is to do:
+
+```
+nat.devtools::nat_setup_package()
+```
+
+This configures almost everything about a project and will ask interactive
+questions to determine if you want to upgrade / overwrite different files.
+
+If you switch between different projects in the same session,
+then you must do:
+
+```
+usethis::proj_set()
+```
+
+to set the active project to the current directory.
