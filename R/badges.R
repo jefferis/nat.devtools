@@ -25,6 +25,24 @@ use_doc_badge <- function(path=".") {
 }
 
 
+#' @description \code{use_cran_downloads_badge} adds a badge to give the number
+#'   of downloads / month from CRAN.
+#'
+#' @export
+#' @rdname natverse-badges
+#' @importFrom glue glue
+use_cran_downloads_badge <- function(path='.') {
+  usethis::with_project(path=path, {
+    p=usethis::proj_get()
+    pkg=devtools::as.package(p)
+    package=pkg$package
+    usethis::use_badge(badge_name = "Downloads",
+                       href = glue('http://www.r-pkg.org/pkg/{package}'),
+                       src = glue("http://cranlogs.r-pkg.org/badges/{package}?color=brightgreen"))
+  })
+}
+
+
 #' @description \code{use_natverse_badge} adds a badge to say that package is a member of the natverse
 #'
 #' @export
@@ -34,6 +52,7 @@ use_natverse_badge <- function(path=".") {
                      href = 'https://natverse.github.io',
                      src = "https://img.shields.io/badge/natverse-Part%20of%20the%20natverse-a241b6")
 }
+
 
 has_badge_comments <- function(f) {
   txt = readLines(f)

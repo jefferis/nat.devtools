@@ -16,6 +16,7 @@ Imports:
     checkmate,
     devtools,
     dplyr,
+    glue,
     httr,
     stringr,
     tibble,

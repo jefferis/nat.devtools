@@ -3,10 +3,13 @@
 \name{natverse-badges}
 \alias{natverse-badges}
 \alias{use_doc_badge}
+\alias{use_cran_downloads_badge}
 \alias{use_natverse_badge}
 \title{Add natverse badges to package README}
 \usage{
 use_doc_badge(path = ".")
+
+use_cran_downloads_badge(path = ".")
 
 use_natverse_badge(path = ".")
 }
@@ -16,6 +19,9 @@ working directory)}
 }
 \description{
 \code{use_doc_badge} adds a badge linking to the pkgdown site for the package
+
+\code{use_cran_downloads_badge} adds a badge to give the number
+  of downloads / month from CRAN.
 
 \code{use_natverse_badge} adds a badge to say that package is a member of the natverse
 }
