@@ -37,3 +37,18 @@ get_package <- function() {
   path=proj_get()
   devtools::as.package(path)
 }
+
+on_cran <- function(pkgname=NULL){
+  if(is.null(pkgname))
+    pkg=get_package()
+  pkgname=pkg$package
+
+  # nb this universal mirror is faster than the canonical url
+  # https://cran.r-project.org
+  cran_url <- glue('https://cloud.r-project.org/package={pkgname}')
+  url_ok(cran_url)
+}
+
+url_ok <- function(x) {
+  identical(httr::status_code(httr::HEAD(x)), 200L)
+}
