@@ -5,7 +5,6 @@
 \alias{use_doc_badge}
 \alias{use_cran_downloads_badge}
 \alias{use_natverse_badge}
-\alias{nat_standard_badges}
 \title{Add natverse badges to package README}
 \usage{
 use_doc_badge()
@@ -13,14 +12,6 @@ use_doc_badge()
 use_cran_downloads_badge()
 
 use_natverse_badge()
-
-nat_standard_badges(x = "README.md", lifecycle = NULL)
-}
-\arguments{
-\item{x}{Name of README file}
-
-\item{lifecycle}{The developmental stage of the package (see
-\url{https://www.tidyverse.org/lifecycle})}
 }
 \description{
 \code{use_doc_badge} adds a badge linking to the pkgdown site
@@ -30,6 +21,4 @@ nat_standard_badges(x = "README.md", lifecycle = NULL)
   of downloads / month from CRAN.
 
 \code{use_natverse_badge} adds a badge to say that package is a member of the natverse
-
-\code{nat_standard_badges} Adds all standard badges to your README.md
 }

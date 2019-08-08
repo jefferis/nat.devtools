@@ -18,5 +18,5 @@ working directory)}
 Setup a package in natverse style
 }
 \seealso{
-\code{\link{nat_standard_badges}}
+\code{\link{nat_setup_badges}}, \code{\link{nat_setup_pkgdown}}
 }

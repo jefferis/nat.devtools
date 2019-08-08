@@ -4,13 +4,21 @@
 \name{nat.devtools-package}
 \alias{nat.devtools}
 \alias{nat.devtools-package}
-\title{eywords internal}
+\title{nat.devtools: Tools to help develop natverse packages}
 \description{
-*nat.devtools* is built on top of the \code{\link{usethis}} package. It
-  shares the key concept of the active package. If you are using Rstudio to
-  develop a package, then all should be fine. You can start by running
-  \code{\link{nat_setup_package}}, which should do everything for a complete
-  package setup.
+Provides functions to automate some aspects of
+    package setup for the natverse.
+}
+\details{
+\bold{nat.devtools} is built on top of the \code{\link{usethis}}
+  package. It shares the key concept of the active package. If you are using
+  Rstudio to develop a single package, then all should be fine. If you need
+  to change between different packages, check out the
+  \code{usethis::\link{proj_utils}} dcoumentation.
+
+  You can start by running \code{\link{nat_setup_package}}, which should do
+  everything for a complete package setup. More specialised functions are
+  available for selected tasks once you already have a package setup.
 }
 \seealso{
 Useful links:
@@ -24,3 +32,4 @@ Useful links:
 \strong{Maintainer}: Gregory Jefferis \email{jefferis@gmail.com} (0000-0002-0587-9355)
 
 }
+\keyword{internal}

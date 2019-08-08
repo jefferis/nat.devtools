@@ -49,12 +49,13 @@ use_natverse_badge <- function() {
 }
 
 
-#' @description \code{nat_standard_badges} Adds all standard badges to your README.md
+#' Adds all standard badges to your README.md
+#'
 #' @inheritParams add_badge_comments
 #' @inheritParams nat_setup_package
 #' @export
-#' @rdname natverse-badges
-nat_standard_badges <- function(x='README.md', lifecycle=NULL) {
+#' @seealso \code{\link{natverse-badges}}
+nat_setup_badges <- function(x='README.md', lifecycle=NULL) {
   # f=remove_badges(x)
 
   add_badge_comments()

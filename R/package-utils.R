@@ -68,7 +68,7 @@ nat_check_urls <-
 #' @param path Path to git repository containing package (defaults to current
 #'   working directory)
 #'
-#' @seealso \code{\link{nat_standard_badges}}
+#' @seealso \code{\link{nat_setup_badges}}, \code{\link{nat_setup_pkgdown}}
 #' @export
 nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable')) {

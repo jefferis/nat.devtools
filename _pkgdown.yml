@@ -1,1 +1,61 @@
 destination: docs
+reference:
+- title: Package overview
+  desc: ~
+  contents: '`nat.devtools-package`'
+- title: Package setup
+  desc: ~
+  contents:
+  - '`use_nat_description_defaults`'
+- title: Top level function
+  desc: Use this for initial setup of a package.
+  contents:
+  - '`nat_setup_package`'
+- title: Transferring a package
+  desc: Use this to help transfer a package to the natverse GitHub organisation.
+  contents:
+  - '`nat_check_urls`'
+- title: Mid level functions
+  desc: Use these to setup the README or pkgdown help for an existing package.
+  contents:
+  - '`nat_setup_badges`'
+  - '`nat_setup_pkgdown`'
+- title: Low level functions
+  desc: ~
+  contents:
+  - '`add_badge_comments`'
+  - '`natverse-badges`'
+  - '`use_nat_support`'
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    - help
+    right:
+    - natverse
+    - github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/jefferis/nat.devtools
+    natverse:
+      text: natverse
+      href: https://natverse.github.io
+    help:
+      text: Help
+      href: SUPPORT.html
+
