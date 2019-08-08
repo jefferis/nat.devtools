@@ -32,3 +32,8 @@ fake_package <- function(path=tempfile()) {
 proj_file_exists <- function(...) {
   file.exists(usethis::proj_path(...))
 }
+
+get_package <- function() {
+  path=proj_get()
+  devtools::as.package(path)
+}

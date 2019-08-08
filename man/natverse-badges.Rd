@@ -7,18 +7,15 @@
 \alias{use_natverse_badge}
 \title{Add natverse badges to package README}
 \usage{
-use_doc_badge(path = ".")
+use_doc_badge()
 
-use_cran_downloads_badge(path = ".")
+use_cran_downloads_badge()
 
-use_natverse_badge(path = ".")
-}
-\arguments{
-\item{path}{Path to git repository containing package (defaults to current
-working directory)}
+use_natverse_badge()
 }
 \description{
-\code{use_doc_badge} adds a badge linking to the pkgdown site for the package
+\code{use_doc_badge} adds a badge linking to the pkgdown site
+  for the current package
 
 \code{use_cran_downloads_badge} adds a badge to give the number
   of downloads / month from CRAN.

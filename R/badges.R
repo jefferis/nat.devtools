@@ -1,15 +1,13 @@
 #' Add natverse badges to package README
 #'
-#' @description \code{use_doc_badge} adds a badge linking to the pkgdown site for the package
-#'
-#' @param path Path to git repository containing package (defaults to current
-#'   working directory)
+#' @description \code{use_doc_badge} adds a badge linking to the pkgdown site
+#'   for the current package
 #'
 #' @export
 #' @name natverse-badges
 #' @aliases use_doc_badge
-use_doc_badge <- function(path=".") {
-  pkg=devtools::as.package(path)
+use_doc_badge <- function() {
+  pkg <- get_package()
   issues <- pkg$bugreports
   if(is.null(issues))
     stop("Please set the Bug Reports with usethis::use_github_links()")
@@ -31,15 +29,12 @@ use_doc_badge <- function(path=".") {
 #' @export
 #' @rdname natverse-badges
 #' @importFrom glue glue
-use_cran_downloads_badge <- function(path='.') {
-  usethis::with_project(path=path, {
-    p=usethis::proj_get()
-    pkg=devtools::as.package(p)
-    package=pkg$package
-    usethis::use_badge(badge_name = "Downloads",
-                       href = glue('http://www.r-pkg.org/pkg/{package}'),
-                       src = glue("http://cranlogs.r-pkg.org/badges/{package}?color=brightgreen"))
-  })
+use_cran_downloads_badge <- function() {
+  pkg=get_package()
+  package=pkg$package
+  usethis::use_badge(badge_name = "Downloads",
+                     href = glue('http://www.r-pkg.org/pkg/{package}'),
+                     src = glue("http://cranlogs.r-pkg.org/badges/{package}?color=brightgreen"))
 }
 
 
@@ -47,7 +42,7 @@ use_cran_downloads_badge <- function(path='.') {
 #'
 #' @export
 #' @rdname natverse-badges
-use_natverse_badge <- function(path=".") {
+use_natverse_badge <- function() {
   usethis::use_badge(badge_name = "natverse",
                      href = 'https://natverse.github.io',
                      src = "https://img.shields.io/badge/natverse-Part%20of%20the%20natverse-a241b6")
