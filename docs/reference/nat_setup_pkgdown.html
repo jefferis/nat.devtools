@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Add special marker comments delimiting the badge section of package README — add_badge_comments • nat.devtools</title>
+<title>Setup pkgdown according to natverse conventions — nat_setup_pkgdown • nat.devtools</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Add special marker comments delimiting the badge section of package README — add_badge_comments" />
+<meta property="og:title" content="Setup pkgdown according to natverse conventions — nat_setup_pkgdown" />
 
-<meta property="og:description" content="Add special marker comments delimiting the badge section of package README" />
+<meta property="og:description" content="Setup pkgdown according to natverse conventions" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,50 +108,32 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Add special marker comments delimiting the badge section of package README</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jefferis/nat.devtools/blob/master/R/badges.R'><code>R/badges.R</code></a></small>
-    <div class="hidden name"><code>add_badge_comments.Rd</code></div>
+    <h1>Setup pkgdown according to natverse conventions</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jefferis/nat.devtools/blob/master/R/pkgdown.R'><code>R/pkgdown.R</code></a></small>
+    <div class="hidden name"><code>nat_setup_pkgdown.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Add special marker comments delimiting the badge section of package README</p>
+    <p>Setup pkgdown according to natverse conventions</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>add_badge_comments</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>"README.md"</span>, <span class='kw'>f</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>nat_setup_pkgdown</span>(<span class='kw'>config_file</span> <span class='kw'>=</span> <span class='st'>"_pkgdown.yml"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>Name of README file</p></td>
-    </tr>
-    <tr>
-      <th>f</th>
-      <td><p>Absolute path to file (can be used instead of <code>x</code> for
-debugging)</p></td>
+      <th>config_file</th>
+      <td><p>The name of the pkgdown config file (default
+<code>"_pkgdown.yml"</code>)</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Path to modified readme file (invisibly)</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>Badge comment lines are required for
-  <code><a href='https://usethis.r-lib.org/reference/badges.html'>usethis::use_badge</a></code> and friends to automagically add badges to
-  a README.</p>
-<p><code>add_badge_comments</code> will only add badge comments if they are not yet
-  present. If there are some badges present then will add marker comments on
-  either side. Will give a warning and do nothing if badge lines are not
-  contiguous</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><code><a href='natverse-badges.html'>natverse-badges</a></code>, <code><a href='https://usethis.r-lib.org/reference/badges.html'>usethis::use_badge</a></code></p></div>
+    <p>a <code>list</code> describing the pkgdown config</p>
     
 
   </div>
@@ -161,10 +143,6 @@ debugging)</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#see-also">See also</a></li>
           </ul>
 
   </div>

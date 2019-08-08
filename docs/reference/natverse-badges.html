@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Add natverse badges to package README — use_doc_badge • nat.devtools</title>
+<title>Add natverse badges to package README — natverse-badges • nat.devtools</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,12 @@
 
 
 
-<meta property="og:title" content="Add natverse badges to package README — use_doc_badge" />
+<meta property="og:title" content="Add natverse badges to package README — natverse-badges" />
 
-<meta property="og:description" content="use_doc_badge adds a badge linking to the pkgdown site for the package
+<meta property="og:description" content="use_doc_badge adds a badge linking to the pkgdown site
+  for the current package
+use_cran_downloads_badge adds a badge to give the number
+  of downloads / month from CRAN.
 use_natverse_badge adds a badge to say that package is a member of the natverse" />
 <meta name="twitter:card" content="summary" />
 
@@ -64,7 +67,7 @@ use_natverse_badge adds a badge to say that package is a member of the natverse"
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nat.devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -79,10 +82,19 @@ use_natverse_badge adds a badge to say that package is a member of the natverse"
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
+<li>
+  <a href="../SUPPORT.html">Help</a>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://natverse.github.io">natverse</a>
+</li>
+<li>
   <a href="https://github.com/jefferis/nat.devtools">
     <span class="fa fa-github fa-lg"></span>
      
@@ -107,31 +119,25 @@ use_natverse_badge adds a badge to say that package is a member of the natverse"
 
     <div class="ref-description">
     
-    <p><code>use_doc_badge</code> adds a badge linking to the pkgdown site for the package</p>
+    <p><code>use_doc_badge</code> adds a badge linking to the pkgdown site
+  for the current package</p>
+<p><code>use_cran_downloads_badge</code> adds a badge to give the number
+  of downloads / month from CRAN.</p>
 <p><code>use_natverse_badge</code> adds a badge to say that package is a member of the natverse</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>use_doc_badge</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"."</span>)
+    <pre class="usage"><span class='fu'>use_doc_badge</span>()
 
-<span class='fu'>use_natverse_badge</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"."</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>path</th>
-      <td><p>Path to git repository containing package (defaults to current
-working directory)</p></td>
-    </tr>
-    </table>
-    
+<span class='fu'>use_cran_downloads_badge</span>()
+
+<span class='fu'>use_natverse_badge</span>()</pre>
+        
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
                 </ul>
 
   </div>

@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">nat.devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -46,8 +46,17 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
+<li>
+  <a href="SUPPORT.html">Help</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://natverse.github.io">natverse</a>
+</li>
 <li>
   <a href="https://github.com/jefferis/nat.devtools">
     <span class="fa fa-github fa-lg"></span>
@@ -74,7 +83,10 @@
 <div id="setup" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setup" class="anchor"></a>Setup</h2>
-<p>nat.devtools uses the <a href="https://usethis.r-lib.org/">usethis</a> package to automate a number of development tasks. Please ensure that you have configured usethis <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">as recommended</a>. In particular, I have the following in my <code>.Rprofile</code>:</p>
+<p>nat.devtools uses the <a href="https://usethis.r-lib.org/">usethis</a> package to automate a number of development tasks. Please ensure that you have configured usethis <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">as recommended</a>.</p>
+<p>You can do this by typing the following in your R session:</p>
+<pre><code><a href="reference/use_nat_description_defaults.html">nat.devtools::use_nat_description_defaults()</a></code></pre>
+<p>to edit your <code>.Rprofile</code> file. Mine looks like this:</p>
 <pre><code><a href="https://www.rdocumentation.org/packages/base/topics/options">options(
   usethis.full_name = "Gregory Jefferis",
   usethis.protocol  = "ssh",
@@ -86,6 +98,16 @@
     Language = "en-GB"
   )
 )</a></code></pre>
+</div>
+<div id="use" class="section level2">
+<h2 class="hasAnchor">
+<a href="#use" class="anchor"></a>Use</h2>
+<p>Once you’re all set up, then the easiest way to use the package to configure your current project is to do:</p>
+<pre><code><a href="reference/nat_setup_package.html">nat.devtools::nat_setup_package()</a></code></pre>
+<p>This configures almost everything about a project and will ask interactive questions to determine if you want to upgrade / overwrite different files.</p>
+<p>If you switch between different projects in the same session, then you must do:</p>
+<pre><code><a href="https://usethis.r-lib.org/reference/proj_utils.html">usethis::proj_set()</a></code></pre>
+<p>to set the active project to the current directory.</p>
 </div>
 </div>
   </div>

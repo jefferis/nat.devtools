@@ -60,7 +60,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nat.devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -75,10 +75,19 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
+<li>
+  <a href="../SUPPORT.html">Help</a>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://natverse.github.io">natverse</a>
+</li>
+<li>
   <a href="https://github.com/jefferis/nat.devtools">
     <span class="fa fa-github fa-lg"></span>
      
@@ -110,7 +119,83 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <h2 id="section-package-overview" class="hasAnchor"><a href="#section-package-overview" class="anchor"></a>Package overview</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="nat.devtools-package.html">nat.devtools-package</a></code> </p>
+        </td>
+        <td><p>nat.devtools: Tools to help develop natverse packages</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-package-setup" class="hasAnchor"><a href="#section-package-setup" class="anchor"></a>Package setup</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="use_nat_description_defaults.html">use_nat_description_defaults()</a></code> </p>
+        </td>
+        <td><p>Set default authorship/package DESCRIPTION information in your Rprofile</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-top-level-function" class="hasAnchor"><a href="#section-top-level-function" class="anchor"></a>Top level function</h2>
+          <p class="section-desc"><p>Use this for initial setup of a package.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="nat_setup_package.html">nat_setup_package()</a></code> </p>
+        </td>
+        <td><p>Setup a package in natverse style</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-transferring-a-package" class="hasAnchor"><a href="#section-transferring-a-package" class="anchor"></a>Transferring a package</h2>
+          <p class="section-desc"><p>Use this to help transfer a package to the natverse GitHub organisation.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="nat_check_urls.html">nat_check_urls()</a></code> </p>
+        </td>
+        <td><p>Check for files containing old jefferis/lab URLs.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-mid-level-functions" class="hasAnchor"><a href="#section-mid-level-functions" class="anchor"></a>Mid level functions</h2>
+          <p class="section-desc"><p>Use these to setup the README or pkgdown help for an existing package.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="nat_setup_badges.html">nat_setup_badges()</a></code> </p>
+        </td>
+        <td><p>Adds all standard badges to your README.md</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="nat_setup_pkgdown.html">nat_setup_pkgdown()</a></code> </p>
+        </td>
+        <td><p>Setup pkgdown according to natverse conventions</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-low-level-functions" class="hasAnchor"><a href="#section-low-level-functions" class="anchor"></a>Low level functions</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -119,31 +204,19 @@
         <td>
           <p><code><a href="add_badge_comments.html">add_badge_comments()</a></code> </p>
         </td>
-        <td><p>Add special marker comments delimiting the badge section to package README</p></td>
+        <td><p>Add special marker comments delimiting the badge section of package README</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="nat_check_urls.html">nat_check_urls()</a></code> </p>
-        </td>
-        <td><p>Check for files containing old jefferis/lab URLs.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nat_setup_package.html">nat_setup_package()</a></code> </p>
-        </td>
-        <td><p>Setup a package in natverse style</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="natverse-badges.html">use_doc_badge()</a></code> <code><a href="natverse-badges.html">use_natverse_badge()</a></code> </p>
+          <p><code><a href="natverse-badges.html">use_doc_badge()</a></code> <code><a href="natverse-badges.html">use_cran_downloads_badge()</a></code> <code><a href="natverse-badges.html">use_natverse_badge()</a></code> </p>
         </td>
         <td><p>Add natverse badges to package README</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="use_nat_description_defaults.html">use_nat_description_defaults()</a></code> </p>
+          <p><code><a href="use_nat_support.html">use_nat_support()</a></code> </p>
         </td>
-        <td><p>Set default authorship/package DESCRIPTION information in your Rprofile</p></td>
+        <td><p>Add a SUPPORT.md file with information about getting help</p></td>
       </tr>
     </tbody>
     </table>
@@ -152,7 +225,12 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-package-overview">Package overview</a></li>
+      <li><a href="#section-package-setup">Package setup</a></li>
+      <li><a href="#section-top-level-function">Top level function</a></li>
+      <li><a href="#section-transferring-a-package">Transferring a package</a></li>
+      <li><a href="#section-mid-level-functions">Mid level functions</a></li>
+      <li><a href="#section-low-level-functions">Low level functions</a></li>
     </ul>
   </div>
 </div>
