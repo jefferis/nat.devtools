@@ -101,12 +101,11 @@ nat_setup_package <- function(path='.',
     usethis::ui_todo("Add {ui_path('NEWS.md')} file with {ui_code('usethis::use_news_md()')}")
 }
 
-use_nat_support <- function(path='.') {
-  owd <- setwd(path)
-  on.exit(setwd(owd))
-  pkg=devtools::as.package(usethis::proj_get())
+use_nat_support <- function() {
+  pkg=get_package()
   usethis::use_directory(".github", ignore = TRUE)
-  usethis::use_template("natverse-support.md", ".github/SUPPORT.md",
+  usethis::use_template(".github/SUPPORT.md",
                data = list(package = pkg$package),
+               template="natverse-support.md",
                package = 'nat.devtools')
 }
