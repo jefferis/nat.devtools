@@ -18,9 +18,11 @@ Imports:
     dplyr,
     glue,
     httr,
+    pkgdown,
     stringr,
     tibble,
-    usethis
+    usethis,
+    yaml
 Suggests: 
     clipr,
     testthat (>= 2.1.0)

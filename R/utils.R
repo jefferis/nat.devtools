@@ -34,7 +34,7 @@ proj_file_exists <- function(...) {
 }
 
 get_package <- function() {
-  path=proj_get()
+  path=usethis::proj_get()
   devtools::as.package(path)
 }
 
