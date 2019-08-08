@@ -1,6 +1,6 @@
 Package: nat.devtools
 Title: Tools to help develop natverse packages
-Version: 0.0.0.9000
+Version: 0.2.0
 Authors@R: 
     person(given = "Gregory",
            family = "Jefferis",
