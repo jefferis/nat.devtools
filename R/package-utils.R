@@ -89,7 +89,7 @@ nat_setup_package <- function(path='.',
 
   if(!proj_file_exists('README.md') && !proj_file_exists('README.Rmd'))
   usethis::use_readme_md(open = FALSE)
-  nat_standard_badges()
+  nat_setup_badges()
 
   usethis::use_travis()
 
