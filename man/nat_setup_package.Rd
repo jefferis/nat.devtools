@@ -17,6 +17,13 @@ working directory)}
 \description{
 Setup a package in natverse style
 }
+\examples{
+\dontrun{
+nat.devtools::nat_setup_package(lifecycle='maturing')
+nat.devtools::nat_setup_package(lifecycle='stable')
+nat.devtools::nat_setup_package(lifecycle='experimental')
+}
+}
 \seealso{
 \code{\link{nat_setup_badges}}, \code{\link{nat_setup_pkgdown}}
 }

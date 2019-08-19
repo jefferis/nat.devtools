@@ -70,16 +70,23 @@ nat_check_urls <-
 #'
 #' @seealso \code{\link{nat_setup_badges}}, \code{\link{nat_setup_pkgdown}}
 #' @export
+#' @examples
+#' \dontrun{
+#' nat.devtools::nat_setup_package(lifecycle='maturing')
+#' nat.devtools::nat_setup_package(lifecycle='stable')
+#' nat.devtools::nat_setup_package(lifecycle='experimental')
+#' }
 nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable')) {
   lifecycle=match.arg(lifecycle)
   owd <- setwd(path)
   on.exit(setwd(owd))
-  usethis::proj_get()
+  pkg=get_package()
 
   # usethis::use_github()
 
-  usethis::use_gpl3_license()
+  if(isTRUE(pkg$license=='GPL-3') || is.null(pkg$license))
+    usethis::use_gpl3_license()
   usethis::use_tidy_description()
   usethis::use_testthat()
 
