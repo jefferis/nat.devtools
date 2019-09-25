@@ -22,7 +22,9 @@ Imports:
     stringr,
     tibble,
     usethis,
-    yaml
+    yaml,
+    here,
+    blogdown
 Suggests: 
     clipr,
     testthat (>= 2.1.0)
