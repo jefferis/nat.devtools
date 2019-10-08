@@ -26,6 +26,10 @@ reference:
   - '`add_badge_comments`'
   - '`natverse-badges`'
   - '`use_nat_support`'
+- title: Website helpers
+  desc: Functions to automate work on the natverse website
+  contents:
+  - 'nat_hugo_addarticle'
 navbar:
   structure:
     left:
