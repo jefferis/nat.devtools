@@ -51,7 +51,7 @@ navbar:
       href: news/index.html
     github:
       icon: fa-github fa-lg
-      href: https://github.com/jefferis/nat.devtools
+      href: https://github.com/natverse/nat.devtools
     natverse:
       text: natverse
       href: https://natverse.github.io

@@ -2,9 +2,9 @@
 
 <!-- badges: start -->
 [![natverse](https://img.shields.io/badge/natverse-Part%20of%20the%20natverse-a241b6)](https://natverse.github.io)
-[![Docs](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](https://jefferis.github.io/nat.devtools/reference/)
+[![Docs](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](https://natverse.github.io/nat.devtools/reference/)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.org/jefferis/nat.devtools.svg?branch=master)](https://travis-ci.org/jefferis/nat.devtools)
+[![Travis build status](https://travis-ci.org/natverse/nat.devtools.svg?branch=master)](https://travis-ci.org/natverse/nat.devtools)
 <!-- badges: end -->
 
 
