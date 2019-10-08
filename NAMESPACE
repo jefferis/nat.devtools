@@ -2,6 +2,7 @@
 
 export(add_badge_comments)
 export(nat_check_urls)
+export(nat_hugo_addarticle)
 export(nat_setup_badges)
 export(nat_setup_package)
 export(nat_setup_pkgdown)
