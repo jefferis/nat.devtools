@@ -33,16 +33,27 @@ Create an article from a rmarkdown file and add it in a hugo repository
 }
 \examples{
 \dontrun{
-nat_hugo_addarticle(urlpath='https://raw.githubusercontent.com/natverse/nat/master/vignettes/NeuroGeometry.Rmd',
+urlRemote  <- "https://raw.githubusercontent.com/"
+pathGithub <- "natverse/natverse_hugo/dev_pages/content/articles/2019-09-nat/"
+pic_fileName   <- "natverse_logo-sq.jpg"
+urlRemote  <- "https://raw.githubusercontent.com/"
+vigpathGithub <- "natverse/nat/master/vignettes/"
+vig_fileName   <- "NeuroGeometry.Rmd"
+wikiurlRemote  <- "https://upload.wikimedia.org/"
+wikipath <- "wikipedia/commons/4/45/"
+wiki_fileName   <- "Wide_lightning.jpg"
+nat_hugo_addarticle(urlpath=paste0(urlRemote, vigpathGithub, vig_fileName),
 foldername = '2019-09-nat', title = 'NeuroGeometry - Analysing 3D morphology of neurons',
-author = c('greg'), categories = c('learn','nat'), description = '`nat` version 1.8.13 is now on CRAN!',
-slug = 'nat-1-8-13', logourl_path = 'https://raw.githubusercontent.com/natverse/natverse_hugo/dev_pages/content/articles/2019-09-nat/natverse_logo-sq.jpg',
-metadata_photo = c('Maranda Vandergriff', 'https://unsplash.com/photos/o-d37kiKqqc'))
+author = c('greg'), categories = c('learn','nat'),
+description = '`nat` version 1.8.13 is now on CRAN!',
+slug = 'nat-1-8-13', logourl_path = paste0(urlRemote, pathGithub, pic_fileName),
+metadata_photo = c('Wikipedia', paste0(wikiurlRemote, wikipath, wiki_fileName))
 
-nat_hugo_addarticle(urlpath='https://raw.githubusercontent.com/natverse/nat/master/vignettes/neurons-intro.Rmd',
+vig_fileName   <- "neurons-intro.Rmd"
+nat_hugo_addarticle(urlpath=paste0(urlRemote, vigpathGithub, vig_fileName),
 foldername = '2019-09-neurons', title = 'Introduction to neurons and neuronlists',
 author = c('greg'), categories = c('learn','nat'), description = '`nat` neurons and neuronlists!',
-slug = 'nat',logourl_path = 'https://raw.githubusercontent.com/natverse/natverse_hugo/dev_pages/content/articles/2019-09-nat/natverse_logo-sq.jpg',
-metadata_photo = c('Wikipedia', 'https://upload.wikimedia.org/wikipedia/commons/4/45/Wide_lightning.jpg'))
+slug = 'nat',logourl_path =  paste0(urlRemote, pathGithub, pic_fileName),
+metadata_photo = c('Wikipedia', paste0(wikiurlRemote, wikipath, wiki_fileName))
 }
 }
