@@ -73,19 +73,3 @@ nat_makehexlogo <- function(rawimgpath,outputimgpath, hexbordercolour = 'white',
   file.remove("logos/hex_mask.pdf")
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
