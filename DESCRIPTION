@@ -24,7 +24,10 @@ Imports:
     usethis,
     yaml,
     here,
-    blogdown
+    blogdown,
+    ggplot2,
+    hexSticker,
+    magick
 Suggests: 
     clipr,
     testthat (>= 2.1.0)
