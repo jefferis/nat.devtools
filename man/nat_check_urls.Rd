@@ -4,10 +4,12 @@
 \alias{nat_check_urls}
 \title{Check for files containing old jefferis/lab URLs.}
 \usage{
-nat_check_urls(path = ".",
+nat_check_urls(
+  path = ".",
   pattern = c("^(DESCRIPTION|NEWS|.*\\\\.(R|r|Rmd|md|yml))$"),
   oldusers = c("jefferis", "jefferislab", "flyconnectome"),
-  replace = FALSE)
+  replace = FALSE
+)
 }
 \arguments{
 \item{path}{Path to git repository containing package (defaults to current

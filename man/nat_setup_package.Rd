@@ -4,8 +4,10 @@
 \alias{nat_setup_package}
 \title{Setup a package in natverse style}
 \usage{
-nat_setup_package(path = ".", lifecycle = c("experimental", "maturing",
-  "stable"))
+nat_setup_package(
+  path = ".",
+  lifecycle = c("experimental", "maturing", "stable")
+)
 }
 \arguments{
 \item{path}{Path to git repository containing package (defaults to current

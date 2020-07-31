@@ -27,11 +27,14 @@ Imports:
     blogdown,
     ggplot2,
     hexSticker,
-    magick
+    magick,
+    magrittr (>= 1.5),
 Suggests: 
     clipr,
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    visNetwork (>= 0.2.1),
+    DependenciesGraphs
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
