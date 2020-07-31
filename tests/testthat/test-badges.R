@@ -17,7 +17,6 @@ test_that("add_badge_comments works", {
   on.exit(setwd(owd), add = TRUE, after=FALSE)
 
   usethis::with_project(tf, {
-    print(tf)
     expect_message(add_badge_comments(), regexp = "marker comments added to")
     expect_equal(readLines('README.md'), readLines('baseline.md'))
 
