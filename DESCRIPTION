@@ -34,6 +34,8 @@ Suggests:
     testthat (>= 2.1.0),
     visNetwork (>= 0.2.1),
     DependenciesGraphs
+Remotes: 
+    datastorm-open/DependenciesGraphs
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
