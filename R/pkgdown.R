@@ -5,11 +5,14 @@
 #'
 #' @return a \code{list} describing the pkgdown config
 #' @export
-nat_setup_pkgdown <- function(config_file = "_pkgdown.yml") {
+nat_setup_pkgdown <- function(config_file = "_pkgdown.yml", github=TRUE) {
   f=usethis::proj_path(config_file)
   if(!file.exists(f)){
     usethis::ui_done("Setting up pkgdown with {ui_code('usethis::use_pkgdown()')}")
-    usethis::use_pkgdown()
+    if(github)
+      usethis::use_pkgdown_github_pages()
+    else
+      usethis::use_pkgdown()
   }
   y=yaml::read_yaml(f)
   if(is.null(y$navbar))

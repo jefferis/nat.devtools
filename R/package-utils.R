@@ -67,6 +67,10 @@ nat_check_urls <-
 #'   \url{https://www.tidyverse.org/lifecycle})
 #' @param path Path to git repository containing package (defaults to current
 #'   working directory)
+#' @param github_pkgdown Whether to build pkgdown docs on github (default) or to
+#'   build and commit them on your own machine. The former is more convenient,
+#'   the latter enables you to include data only found on your machine when
+#'   building documentation.
 #'
 #' @seealso \code{\link{nat_setup_badges}}, \code{\link{nat_setup_pkgdown}}
 #' @export
@@ -77,7 +81,8 @@ nat_check_urls <-
 #' nat.devtools::nat_setup_package(lifecycle='experimental')
 #' }
 nat_setup_package <- function(path='.',
-                              lifecycle=c('experimental', 'maturing', 'stable')) {
+                              lifecycle=c('experimental', 'maturing', 'stable'), ci=c("github", "travis"),
+                              github_pkgdown=TRUE) {
   lifecycle=match.arg(lifecycle)
   owd <- setwd(path)
   on.exit(setwd(owd))
@@ -98,7 +103,12 @@ nat_setup_package <- function(path='.',
   usethis::use_readme_md(open = FALSE)
   nat_setup_badges()
 
-  usethis::use_travis()
+  if(ci=='travis')
+    usethis::use_travis()
+  else {
+    usethis::use_github_actions()
+    usethis::use_github_actions()
+  }
 
   usethis::use_package_doc()
 

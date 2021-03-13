@@ -4,7 +4,7 @@
 \alias{nat_setup_pkgdown}
 \title{Setup pkgdown according to natverse conventions}
 \usage{
-nat_setup_pkgdown(config_file = "_pkgdown.yml")
+nat_setup_pkgdown(config_file = "_pkgdown.yml", github = TRUE)
 }
 \arguments{
 \item{config_file}{The name of the pkgdown config file (default

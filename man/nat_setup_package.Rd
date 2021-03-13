@@ -4,8 +4,12 @@
 \alias{nat_setup_package}
 \title{Setup a package in natverse style}
 \usage{
-nat_setup_package(path = ".", lifecycle = c("experimental", "maturing",
-  "stable"))
+nat_setup_package(
+  path = ".",
+  lifecycle = c("experimental", "maturing", "stable"),
+  ci = c("github", "travis"),
+  github_pkgdown = TRUE
+)
 }
 \arguments{
 \item{path}{Path to git repository containing package (defaults to current
@@ -13,6 +17,11 @@ working directory)}
 
 \item{lifecycle}{The developmental stage of the package (see
 \url{https://www.tidyverse.org/lifecycle})}
+
+\item{github_pkgdown}{Whether to build pkgdown docs on github (default) or to
+build and commit them on your own machine. The former is more convenient,
+the latter enables you to include data only found on your machine when
+building documentation.}
 }
 \description{
 Setup a package in natverse style
