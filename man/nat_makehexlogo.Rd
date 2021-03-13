@@ -4,8 +4,12 @@
 \alias{nat_makehexlogo}
 \title{Make hexagon logo from any kind of image}
 \usage{
-nat_makehexlogo(rawimgpath, outputimgpath, hexbordercolour = "white",
-  hexinnercolour = "red")
+nat_makehexlogo(
+  rawimgpath,
+  outputimgpath,
+  hexbordercolour = "white",
+  hexinnercolour = "red"
+)
 }
 \arguments{
 \item{rawimgpath}{Path to the png file (that contains the actual logo)}

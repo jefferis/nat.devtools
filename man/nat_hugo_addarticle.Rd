@@ -4,8 +4,17 @@
 \alias{nat_hugo_addarticle}
 \title{Create an article from a rmarkdown file and add it in a hugo repository}
 \usage{
-nat_hugo_addarticle(urlpath, foldername, title, author, categories,
-  description, slug, logourl_path, metadata_photo)
+nat_hugo_addarticle(
+  urlpath,
+  foldername,
+  title,
+  author,
+  categories,
+  description,
+  slug,
+  logourl_path,
+  metadata_photo
+)
 }
 \arguments{
 \item{urlpath}{Path to the rmarkdown file (usually a location on the web)}
