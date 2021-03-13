@@ -80,6 +80,7 @@ nat_check_urls <-
 #' nat.devtools::nat_setup_package(lifecycle='stable')
 #' nat.devtools::nat_setup_package(lifecycle='experimental')
 #' }
+#' @importFrom usethis ui_code ui_path
 nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable'), ci=c("github", "travis"),
                               github_pkgdown=TRUE) {
