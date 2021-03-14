@@ -17,7 +17,7 @@ test_that("add_badge_comments works", {
   on.exit(setwd(owd), add = TRUE, after=FALSE)
 
   usethis::with_project(tf, {
-    expect_output(add_badge_comments(), regexp = 'added to README')
+    expect_message(add_badge_comments(), regexp = "marker comments added to")
     expect_equal(readLines('README.md'), readLines('baseline.md'))
 
     file.copy(file.path(owd,'testdata/readme-extraneous-badge-line.md'),
