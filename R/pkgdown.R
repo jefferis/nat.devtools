@@ -2,6 +2,8 @@
 #'
 #' @param config_file The name of the pkgdown config file (default
 #'   \code{"_pkgdown.yml"})
+#' @param github Whether to use github to build the pkgdown site (default
+#'   \code{TRUE})
 #'
 #' @return a \code{list} describing the pkgdown config
 #' @export

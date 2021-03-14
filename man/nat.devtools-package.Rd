@@ -23,6 +23,7 @@ Provides functions to automate some aspects of
 \seealso{
 Useful links:
 \itemize{
+  \item \url{http://natverse.org/nat.devtools}
   \item \url{https://github.com/natverse/nat.devtools}
   \item Report bugs at \url{https://github.com/natverse/nat.devtools/issues}
 }

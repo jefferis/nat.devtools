@@ -9,6 +9,9 @@ nat_setup_pkgdown(config_file = "_pkgdown.yml", github = TRUE)
 \arguments{
 \item{config_file}{The name of the pkgdown config file (default
 \code{"_pkgdown.yml"})}
+
+\item{github}{Whether to use github to build the pkgdown site (default
+\code{TRUE})}
 }
 \value{
 a \code{list} describing the pkgdown config

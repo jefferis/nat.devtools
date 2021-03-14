@@ -116,7 +116,7 @@ nat_setup_package <- function(path='.',
 
   usethis::use_package_doc()
 
-  nat_setup_pkgdown()
+  nat_setup_pkgdown(github = github_pkgdown)
 
   if(!proj_file_exists('NEWS.md'))
     usethis::ui_todo("Add {ui_path('NEWS.md')} file with {ui_code('usethis::use_news_md()')}")
