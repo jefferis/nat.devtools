@@ -18,6 +18,9 @@ working directory)}
 \item{lifecycle}{The developmental stage of the package (see
 \url{https://www.tidyverse.org/lifecycle})}
 
+\item{ci}{Which ci service to use. Github is now recommended unless you have
+particularly complex builds.}
+
 \item{github_pkgdown}{Whether to build pkgdown docs on github (default) or to
 build and commit them on your own machine. The former is more convenient,
 the latter enables you to include data only found on your machine when

@@ -67,6 +67,8 @@ nat_check_urls <-
 #'   \url{https://www.tidyverse.org/lifecycle})
 #' @param path Path to git repository containing package (defaults to current
 #'   working directory)
+#' @param ci Which ci service to use. Github is now recommended unless you have
+#'   particularly complex builds.
 #' @param github_pkgdown Whether to build pkgdown docs on github (default) or to
 #'   build and commit them on your own machine. The former is more convenient,
 #'   the latter enables you to include data only found on your machine when
@@ -85,6 +87,7 @@ nat_setup_package <- function(path='.',
                               lifecycle=c('experimental', 'maturing', 'stable'), ci=c("github", "travis"),
                               github_pkgdown=TRUE) {
   lifecycle=match.arg(lifecycle)
+  ci=match.arg(ci)
   owd <- setwd(path)
   on.exit(setwd(owd))
   pkg=get_package()
